@@ -19,12 +19,12 @@ namespace Student_Course_Enrollment.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllEnrollments()
+        public async Task<IActionResult> GetAllEnrollments()
         {
-            var enrollments = dbContext.Enrollments
+            var enrollments = await dbContext.Enrollments
                              .Include(e => e.Student)
                              .Include(e => e.Course)
-                             .ToList();
+                             .ToListAsync();
 
             var dto = enrollments.Select(e => new EnrollmentDto
             {
@@ -41,12 +41,12 @@ namespace Student_Course_Enrollment.API.Controllers
         }
 
         [HttpGet("{studentId:guid}/{courseId:guid}")]
-        public IActionResult GetEnrollmentByStudentAndCourse(Guid studentId, Guid courseId)
+        public async Task<IActionResult> GetEnrollmentByStudentAndCourse(Guid studentId, Guid courseId)
         {
-            var enrollment = dbContext.Enrollments
+            var enrollment = await dbContext.Enrollments
                             .Include(e => e.Student)
                             .Include(e => e.Course)
-                            .FirstOrDefault(e =>     
+                            .FirstOrDefaultAsync(e =>     
                              e.StudentId == studentId &&
                              e.CourseId == courseId);
 
@@ -69,7 +69,7 @@ namespace Student_Course_Enrollment.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateEnrollment([FromBody] AddEnrollmentDto request)
+        public async Task<IActionResult> CreateEnrollment([FromBody] AddEnrollmentDto request)
         {
             var enrollment = new Enrollment
             {
@@ -78,8 +78,8 @@ namespace Student_Course_Enrollment.API.Controllers
                 EnrollmentDate = request.EnrollmentDate,
                 Grade = request.Grade.GetValueOrDefault()
             };
-            dbContext.Enrollments.Add(enrollment);
-            dbContext.SaveChanges();
+            await dbContext.Enrollments.AddAsync(enrollment);
+            await dbContext.SaveChangesAsync();
 
             var dto = new EnrollmentDto
             {
@@ -96,16 +96,16 @@ namespace Student_Course_Enrollment.API.Controllers
         }
 
         [HttpPut("{studentId:guid}/{courseId:guid}")]
-        public IActionResult UpdateEnrollment(Guid studentId, Guid courseId, [FromBody] AddEnrollmentDto request)
+        public async Task<IActionResult> UpdateEnrollment(Guid studentId, Guid courseId, [FromBody] AddEnrollmentDto request)
         {
-            var enrollment = dbContext.Enrollments.FirstOrDefault(e => e.StudentId == studentId && e.CourseId == courseId);
+            var enrollment = await dbContext.Enrollments.FirstOrDefaultAsync(e => e.StudentId == studentId && e.CourseId == courseId);
             if (enrollment == null)
             {
                 return NotFound();
             }
             enrollment.EnrollmentDate = request.EnrollmentDate;
             enrollment.Grade = request.Grade.GetValueOrDefault();
-            dbContext.SaveChanges();
+            await dbContext.SaveChangesAsync();
             var dto = new EnrollmentDto
             {
                 StudentId = enrollment.StudentId,
@@ -119,15 +119,15 @@ namespace Student_Course_Enrollment.API.Controllers
         }
 
         [HttpDelete("{studentId:guid}/{courseId:guid}")]
-        public IActionResult DeleteEnrollment(Guid studentId, Guid courseId)
+        public async Task<IActionResult> DeleteEnrollment(Guid studentId, Guid courseId)
         {
-            var enrollment = dbContext.Enrollments.FirstOrDefault(e => e.StudentId == studentId && e.CourseId == courseId);
+            var enrollment = await dbContext.Enrollments.FirstOrDefaultAsync(e => e.StudentId == studentId && e.CourseId == courseId);
             if (enrollment == null)
             {
                 return NotFound();
             }
             dbContext.Enrollments.Remove(enrollment);
-            dbContext.SaveChanges();
+            await dbContext.SaveChangesAsync();
             return NoContent();
         }
     }

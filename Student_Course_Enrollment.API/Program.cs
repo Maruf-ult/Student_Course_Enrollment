@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Student_Course_Enrollment.API.Data;
+using Student_Course_Enrollment.API.Repositories.Implementation;
+using Student_Course_Enrollment.API.Repositories.Interfaces;
+using Student_Course_Enrollment.API.Services.Interfaces;
+using Student_Course_Enrollment.API.Services.Repositories;
 
 namespace Student_Course_Enrollment.API
 {
@@ -12,6 +16,9 @@ namespace Student_Course_Enrollment.API
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+            builder.Services.AddScoped<IStudentRepository,StudentRepository>();
+            builder.Services.AddScoped<IStudentService, StudentService>();
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

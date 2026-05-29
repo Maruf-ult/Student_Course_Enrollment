@@ -19,12 +19,12 @@ namespace Student_Course_Enrollment.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllCourses()
+        public async Task<IActionResult> GetAllCourses()
         {
-            var courses = dbContext.Courses
+            var courses = await dbContext.Courses
                 .Include(s => s.Enrollments)
                 .ThenInclude(e => e.Student)
-                .ToList();
+                .ToListAsync();
 
             var dto = courses.Select(c => new CourseDto
             {
@@ -47,12 +47,12 @@ namespace Student_Course_Enrollment.API.Controllers
 
         [HttpGet("{id:guid}")]
 
-        public IActionResult GetCourseById([FromRoute] Guid id)
+        public async Task<IActionResult> GetCourseById([FromRoute] Guid id)
         {
-            var course = dbContext.Courses
+            var course = await dbContext.Courses
                 .Include(s => s.Enrollments)
                 .ThenInclude(e => e.Student)
-                .FirstOrDefault(c => c.Id == id);
+                .FirstOrDefaultAsync(c => c.Id == id);
 
             if (course == null)
                 return NotFound();
@@ -77,7 +77,7 @@ namespace Student_Course_Enrollment.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddCourse([FromBody] AddCourseDto request)
+        public async Task<IActionResult> AddCourse([FromBody] AddCourseDto request)
         {
             var course = new Course
             {
@@ -86,8 +86,8 @@ namespace Student_Course_Enrollment.API.Controllers
                 Description = request.Description,
             };
 
-            dbContext.Courses.Add(course);
-            dbContext.SaveChanges();
+            await dbContext.Courses.AddAsync(course);
+            await dbContext.SaveChangesAsync();
 
             var dto = new CourseDto
             {
@@ -102,14 +102,14 @@ namespace Student_Course_Enrollment.API.Controllers
         }
 
         [HttpPut("{id:guid}")]
-        public IActionResult UpdateCourse([FromRoute] Guid id, [FromBody] UpdateCourseDto request)
+        public async Task<IActionResult> UpdateCourse([FromRoute] Guid id, [FromBody] UpdateCourseDto request)
         {
-            var course = dbContext.Courses.FirstOrDefault(c => c.Id == id);
+            var course = await dbContext.Courses.FirstOrDefaultAsync(c => c.Id == id);
             if (course == null)
                 return NotFound();
             course.Title = request.Title;
             course.Description = request.Description;
-            dbContext.SaveChanges();
+            await dbContext.SaveChangesAsync();
             var dto = new CourseDto
             {
                 Id = course.Id,
@@ -121,13 +121,13 @@ namespace Student_Course_Enrollment.API.Controllers
         }
 
         [HttpDelete("{id:guid}")]
-        public IActionResult DeleteCourse([FromRoute] Guid id)
+        public async Task<IActionResult> DeleteCourse([FromRoute] Guid id)
         {
-            var course = dbContext.Courses.FirstOrDefault(c => c.Id == id);
+            var course = await dbContext.Courses.FirstOrDefaultAsync(c => c.Id == id);
             if (course == null)
                 return NotFound();
             dbContext.Courses.Remove(course);
-            dbContext.SaveChanges();
+            await dbContext.SaveChangesAsync();
             return NoContent();
         }
     }
