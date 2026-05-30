@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Student_Course_Enrollment.API.Data;
 using Student_Course_Enrollment.API.DTOs.EnrollmentDtos;
 using Student_Course_Enrollment.API.Models;
+using Student_Course_Enrollment.API.Services.Interfaces;
 
 namespace Student_Course_Enrollment.API.Controllers
 {
@@ -11,20 +12,18 @@ namespace Student_Course_Enrollment.API.Controllers
     [ApiController]
     public class EnrollmentsController : ControllerBase
     {
-        public readonly StudentDbContext dbContext;
+        private readonly IEnrollmentService _enrollmentService;
 
-        public EnrollmentsController(StudentDbContext dbContext)
+        public EnrollmentsController(IEnrollmentService enrollmentService)
         {
-            this.dbContext = dbContext;
+            _enrollmentService = enrollmentService;
         }
+
 
         [HttpGet]
         public async Task<IActionResult> GetAllEnrollments()
         {
-            var enrollments = await dbContext.Enrollments
-                             .Include(e => e.Student)
-                             .Include(e => e.Course)
-                             .ToListAsync();
+            var enrollments = await _enrollmentService.GetAllAsync();
 
             var dto = enrollments.Select(e => new EnrollmentDto
             {
@@ -43,12 +42,7 @@ namespace Student_Course_Enrollment.API.Controllers
         [HttpGet("{studentId:guid}/{courseId:guid}")]
         public async Task<IActionResult> GetEnrollmentByStudentAndCourse(Guid studentId, Guid courseId)
         {
-            var enrollment = await dbContext.Enrollments
-                            .Include(e => e.Student)
-                            .Include(e => e.Course)
-                            .FirstOrDefaultAsync(e =>     
-                             e.StudentId == studentId &&
-                             e.CourseId == courseId);
+            var enrollment = await _enrollmentService.GetByStudentAndCourseAsync(studentId, courseId);
 
             if (enrollment == null)
             {
@@ -71,15 +65,8 @@ namespace Student_Course_Enrollment.API.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateEnrollment([FromBody] AddEnrollmentDto request)
         {
-            var enrollment = new Enrollment
-            {
-                StudentId = request.StudentId,
-                CourseId = request.CourseId,
-                EnrollmentDate = request.EnrollmentDate,
-                Grade = request.Grade.GetValueOrDefault()
-            };
-            await dbContext.Enrollments.AddAsync(enrollment);
-            await dbContext.SaveChangesAsync();
+            
+            var enrollment = await _enrollmentService.CreateAsync(request);
 
             var dto = new EnrollmentDto
             {
@@ -96,16 +83,14 @@ namespace Student_Course_Enrollment.API.Controllers
         }
 
         [HttpPut("{studentId:guid}/{courseId:guid}")]
-        public async Task<IActionResult> UpdateEnrollment(Guid studentId, Guid courseId, [FromBody] AddEnrollmentDto request)
+        public async Task<IActionResult> UpdateEnrollment(Guid studentId, Guid courseId, [FromBody] UpdateEnrollmentDto request)
         {
-            var enrollment = await dbContext.Enrollments.FirstOrDefaultAsync(e => e.StudentId == studentId && e.CourseId == courseId);
+            var enrollment = await _enrollmentService.UpdateAsync(studentId,courseId,request);
             if (enrollment == null)
             {
                 return NotFound();
             }
-            enrollment.EnrollmentDate = request.EnrollmentDate;
-            enrollment.Grade = request.Grade.GetValueOrDefault();
-            await dbContext.SaveChangesAsync();
+
             var dto = new EnrollmentDto
             {
                 StudentId = enrollment.StudentId,
@@ -121,13 +106,12 @@ namespace Student_Course_Enrollment.API.Controllers
         [HttpDelete("{studentId:guid}/{courseId:guid}")]
         public async Task<IActionResult> DeleteEnrollment(Guid studentId, Guid courseId)
         {
-            var enrollment = await dbContext.Enrollments.FirstOrDefaultAsync(e => e.StudentId == studentId && e.CourseId == courseId);
+            var enrollment = await _enrollmentService.DeleteAsync(studentId, courseId);
             if (enrollment == null)
             {
                 return NotFound();
             }
-            dbContext.Enrollments.Remove(enrollment);
-            await dbContext.SaveChangesAsync();
+            
             return NoContent();
         }
     }

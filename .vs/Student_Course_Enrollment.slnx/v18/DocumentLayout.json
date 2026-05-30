@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "D:\\Student_Course_Enrollment\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|d:\\student_course_enrollment\\student_course_enrollment.api\\controllers\\enrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|solutionrelative:student_course_enrollment.api\\controllers\\enrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|d:\\student_course_enrollment\\student_course_enrollment.api\\services\\interfaces\\ienrollmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|solutionrelative:student_course_enrollment.api\\services\\interfaces\\ienrollmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|d:\\student_course_enrollment\\student_course_enrollment.api\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|solutionrelative:student_course_enrollment.api\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|d:\\student_course_enrollment\\student_course_enrollment.api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|solutionrelative:student_course_enrollment.api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|d:\\student_course_enrollment\\student_course_enrollment.api\\services\\implementations\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|solutionrelative:student_course_enrollment.api\\services\\implementations\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|d:\\student_course_enrollment\\student_course_enrollment.api\\services\\interfaces\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|solutionrelative:student_course_enrollment.api\\services\\interfaces\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|d:\\student_course_enrollment\\student_course_enrollment.api\\repositories\\interfaces\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|solutionrelative:student_course_enrollment.api\\repositories\\interfaces\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|d:\\student_course_enrollment\\student_course_enrollment.api\\repositories\\implementations\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C8D013-9E5C-5C8F-05F8-D9E963BD4C64}|Student_Course_Enrollment.API\\Student_Course_Enrollment.API.csproj|solutionrelative:student_course_enrollment.api\\repositories\\implementations\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StudentsController.cs",
-              "DocumentMoniker": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Controllers\\StudentsController.cs",
-              "RelativeDocumentMoniker": "Student_Course_Enrollment.API\\Controllers\\StudentsController.cs",
-              "ToolTip": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Controllers\\StudentsController.cs",
-              "RelativeToolTip": "Student_Course_Enrollment.API\\Controllers\\StudentsController.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T18:54:48.36Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "StudentService.cs",
-              "DocumentMoniker": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Services\\Implementations\\StudentService.cs",
-              "RelativeDocumentMoniker": "Student_Course_Enrollment.API\\Services\\Implementations\\StudentService.cs",
-              "ToolTip": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Services\\Implementations\\StudentService.cs",
-              "RelativeToolTip": "Student_Course_Enrollment.API\\Services\\Implementations\\StudentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T18:40:06.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ICourseService.cs",
-              "DocumentMoniker": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Services\\Interfaces\\ICourseService.cs",
-              "RelativeDocumentMoniker": "Student_Course_Enrollment.API\\Services\\Interfaces\\ICourseService.cs",
-              "ToolTip": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Services\\Interfaces\\ICourseService.cs",
-              "RelativeToolTip": "Student_Course_Enrollment.API\\Services\\Interfaces\\ICourseService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T18:36:26.437Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "CoursesController.cs",
               "DocumentMoniker": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Controllers\\CoursesController.cs",
               "RelativeDocumentMoniker": "Student_Course_Enrollment.API\\Controllers\\CoursesController.cs",
               "ToolTip": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Controllers\\CoursesController.cs",
               "RelativeToolTip": "Student_Course_Enrollment.API\\Controllers\\CoursesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAowFEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T18:24:41.261Z",
+              "WhenOpened": "2026-05-30T05:01:16.493Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CourseRepository.cs",
-              "DocumentMoniker": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Repositories\\Implementations\\CourseRepository.cs",
-              "RelativeDocumentMoniker": "Student_Course_Enrollment.API\\Repositories\\Implementations\\CourseRepository.cs",
-              "ToolTip": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Repositories\\Implementations\\CourseRepository.cs",
-              "RelativeToolTip": "Student_Course_Enrollment.API\\Repositories\\Implementations\\CourseRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "EnrollmentsController.cs",
+              "DocumentMoniker": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Controllers\\EnrollmentsController.cs",
+              "RelativeDocumentMoniker": "Student_Course_Enrollment.API\\Controllers\\EnrollmentsController.cs",
+              "ToolTip": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Controllers\\EnrollmentsController.cs",
+              "RelativeToolTip": "Student_Course_Enrollment.API\\Controllers\\EnrollmentsController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBAAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T18:16:07.21Z",
+              "WhenOpened": "2026-05-30T04:57:46.956Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ICourseRepository.cs",
-              "DocumentMoniker": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Repositories\\Interfaces\\ICourseRepository.cs",
-              "RelativeDocumentMoniker": "Student_Course_Enrollment.API\\Repositories\\Interfaces\\ICourseRepository.cs",
-              "ToolTip": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Repositories\\Interfaces\\ICourseRepository.cs",
-              "RelativeToolTip": "Student_Course_Enrollment.API\\Repositories\\Interfaces\\ICourseRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IEnrollmentService.cs",
+              "DocumentMoniker": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Services\\Interfaces\\IEnrollmentService.cs",
+              "RelativeDocumentMoniker": "Student_Course_Enrollment.API\\Services\\Interfaces\\IEnrollmentService.cs",
+              "ToolTip": "D:\\Student_Course_Enrollment\\Student_Course_Enrollment.API\\Services\\Interfaces\\IEnrollmentService.cs",
+              "RelativeToolTip": "Student_Course_Enrollment.API\\Services\\Interfaces\\IEnrollmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T18:10:25.287Z",
+              "WhenOpened": "2026-05-30T04:12:43.11Z",
               "EditorCaption": ""
             }
           ]

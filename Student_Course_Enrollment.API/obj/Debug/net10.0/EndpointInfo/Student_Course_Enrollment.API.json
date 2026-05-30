@@ -230,17 +230,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddEnrollmentDto"
+                "$ref": "#/components/schemas/UpdateEnrollmentDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddEnrollmentDto"
+                "$ref": "#/components/schemas/UpdateEnrollmentDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/AddEnrollmentDto"
+                "$ref": "#/components/schemas/UpdateEnrollmentDto"
               }
             }
           }
@@ -489,6 +489,29 @@
             "maxLength": 600,
             "minLength": 1,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateEnrollmentDto": {
+        "type": "object",
+        "properties": {
+          "studentId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "courseId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "enrollmentDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "grade": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
           }
         },
         "additionalProperties": false

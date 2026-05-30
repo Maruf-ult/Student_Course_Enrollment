@@ -122,4 +122,5 @@ D:\Student_Course_Enrollment\Student_Course_Enrollment.API\obj\Debug\net10.0\ref
 D:\Student_Course_Enrollment\Student_Course_Enrollment.API\obj\Debug\net10.0\Student_Course_Enrollment.API.pdb
 D:\Student_Course_Enrollment\Student_Course_Enrollment.API\obj\Debug\net10.0\Student_Course_Enrollment.API.genruntimeconfig.cache
 D:\Student_Course_Enrollment\Student_Course_Enrollment.API\obj\Debug\net10.0\ref\Student_Course_Enrollment.API.dll
+D:\Student_Course_Enrollment\Student_Course_Enrollment.API\obj\Debug\net10.0\Student_Course_Enrollment.API.sourcelink.json
 D:\Student_Course_Enrollment\Student_Course_Enrollment.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

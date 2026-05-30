@@ -145,7 +145,7 @@
       },
       {
         "Name": "request",
-        "Type": "Student_Course_Enrollment.API.DTOs.EnrollmentDtos.AddEnrollmentDto",
+        "Type": "Student_Course_Enrollment.API.DTOs.EnrollmentDtos.UpdateEnrollmentDto",
         "IsRequired": true
       }
     ],
@@ -174,7 +174,7 @@
   },
   {
     "ContainingType": "Student_Course_Enrollment.API.Controllers.StudentsController",
-    "Method": "GetAllStudent",
+    "Method": "GetAllStudents",
     "RelativePath": "api/Students",
     "HttpMethod": "GET",
     "IsController": true,
