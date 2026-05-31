@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Student_Course_Enrollment.API.Data;
 using Student_Course_Enrollment.API.Repositories.Implementation;
+using Student_Course_Enrollment.API.Repositories.Implementations;
 using Student_Course_Enrollment.API.Repositories.Interfaces;
+using Student_Course_Enrollment.API.Services.Implementations;
 using Student_Course_Enrollment.API.Services.Interfaces;
 using Student_Course_Enrollment.API.Services.Repositories;
 
@@ -19,6 +21,15 @@ namespace Student_Course_Enrollment.API
 
             builder.Services.AddScoped<IStudentRepository,StudentRepository>();
             builder.Services.AddScoped<IStudentService, StudentService>();
+            builder.Services.AddScoped<IPasswordService, PasswordService>();
+            builder.Services.AddScoped<ITokenService, TokenService>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+            builder.Services.AddScoped<IAuthService, AuthService>();
+
+            builder.Services.AddScoped<IPasswordService, PasswordService>();
+
+            builder.Services.AddScoped<ITokenService, TokenService>();
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

@@ -81,6 +81,33 @@ namespace Student_Course_Enrollment.API.Migrations
                     b.ToTable("Students");
                 });
 
+            modelBuilder.Entity("Student_Course_Enrollment.API.Models.User", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("Student_Course_Enrollment.API.Models.Enrollment", b =>
                 {
                     b.HasOne("Student_Course_Enrollment.API.Models.Course", "Course")

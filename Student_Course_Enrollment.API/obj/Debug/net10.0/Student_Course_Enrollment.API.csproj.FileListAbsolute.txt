@@ -123,4 +123,13 @@ D:\Student_Course_Enrollment\Student_Course_Enrollment.API\obj\Debug\net10.0\Stu
 D:\Student_Course_Enrollment\Student_Course_Enrollment.API\obj\Debug\net10.0\Student_Course_Enrollment.API.genruntimeconfig.cache
 D:\Student_Course_Enrollment\Student_Course_Enrollment.API\obj\Debug\net10.0\ref\Student_Course_Enrollment.API.dll
 D:\Student_Course_Enrollment\Student_Course_Enrollment.API\obj\Debug\net10.0\Student_Course_Enrollment.API.sourcelink.json
+D:\Student_Course_Enrollment\Student_Course_Enrollment.API\bin\Debug\net10.0\BCrypt-Net-Next.dll
+D:\Student_Course_Enrollment\Student_Course_Enrollment.API\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Student_Course_Enrollment\Student_Course_Enrollment.API\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Student_Course_Enrollment\Student_Course_Enrollment.API\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Student_Course_Enrollment\Student_Course_Enrollment.API\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+D:\Student_Course_Enrollment\Student_Course_Enrollment.API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+D:\Student_Course_Enrollment\Student_Course_Enrollment.API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Student_Course_Enrollment\Student_Course_Enrollment.API\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+D:\Student_Course_Enrollment\Student_Course_Enrollment.API\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
 D:\Student_Course_Enrollment\Student_Course_Enrollment.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
